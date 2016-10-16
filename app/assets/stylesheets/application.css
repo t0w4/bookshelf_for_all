@@ -12,6 +12,7 @@
  *
  *
  *= require_self
+ *= require ./
  *= require cerulean/lodader
  *= require cerulean/bootswatch
  */
