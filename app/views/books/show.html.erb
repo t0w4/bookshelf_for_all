@@ -1,0 +1,15 @@
+<div class="col-md-offset-2 col-md-8">
+  <div class="thumbnail">
+      <%= image_tag(@book.image, { :border => '0', :alt => '画像がありません'}) %>
+      <div class="caption">
+        <p class="book-info">タイトル　：<%= @book.title %></p>
+        <p class="book-info">著者　　　：<%= @book.author %></p>
+        <p class="book-info">出版社　　：<%= @book.publisher %></p>
+        <p class="book-info">出版年月日：<%= @book.publicationDate.strftime("%Y年 %m月 %d日") %></p>
+        <p>
+           <a href="#" class="btn btn-primary" role="button">編集</a>
+           <a href="/" class="btn btn-default" role="button">戻る</a>
+        </p>
+    </div>
+  </div>
+</div>

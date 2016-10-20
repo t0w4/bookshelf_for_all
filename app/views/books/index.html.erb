@@ -13,6 +13,26 @@
           </span>
         </div>
       </div>
+
     </div> <!-- /container -->
 
     <hr></hr>
+
+    <div class="row">
+      <div class="col-md-offset-1 col-md-8">
+        <h4>
+          <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+          新着本
+        </h4>
+        <hr></hr>
+
+        <div class="row">
+          <% @books.each do |book| %>
+            <%= render partial: "book", locals: { book: book } %>
+          <% end %>
+        </div>
+        <%= paginate(@books) %>
+
+      </div>
+      <div class="col-md-3">col-md-2</div>
+    </div>
