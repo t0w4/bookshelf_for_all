@@ -31,7 +31,9 @@
             <%= render partial: "book", locals: { book: book } %>
           <% end %>
         </div>
-        <%= paginate(@books) %>
+        <div style='text-align:center;'>
+          <%= paginate(@books) %>
+        </div>
 
       </div>
       <div class="col-md-3">col-md-2</div>

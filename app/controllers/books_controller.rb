@@ -8,4 +8,9 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
   end
 
+  def destroy
+    book = Book.find(params[:id])
+    book.destroy
+  end
+
 end
