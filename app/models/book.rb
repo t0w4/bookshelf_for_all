@@ -3,6 +3,6 @@ class Book < ActiveRecord::Base
   has_many :books_tags
 
   #validation
-  validates_presence_of :title, :author
-
+  validates_presence_of :title, :author, :publicationDate
+  validates_date :publicationDate
 end

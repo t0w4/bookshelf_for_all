@@ -55,3 +55,6 @@ end
   gem 'twitter-bootswatch-rails-helpers'
   gem 'ransack'
   gem 'kaminari-bootstrap', '~> 3.0.1'
+  gem 'momentjs-rails', '>= 2.9.0'
+  gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
+  gem 'validates_timeliness', '~> 4.0'

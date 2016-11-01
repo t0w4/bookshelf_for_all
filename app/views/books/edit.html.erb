@@ -1,0 +1,46 @@
+<div class="col-md-offset-4 col-md-4">
+  <div class="thumbnail">
+
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li class="error-message"><%= message %></li>
+      <% end %>
+    </ul>
+
+    <%= image_tag(@book.image, {:size => "200x300", :border => '0', :alt => '画像がありません'}) %>
+
+    <%= form_for @book do |f| %>
+      <div class="form-group">
+        <label class="control-label" for="focusedInput">作品名</label>
+        <%= f.text_field :title, :class => 'form-control', :id => 'focusedInput' %>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="focusedInput">著者</label>
+        <%= f.text_field :author, :class => 'form-control', :id => 'focusedInput' %>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="focusedInput">出版社</label>
+        <%= f.text_field :publisher, :class => 'form-control', :id => 'focusedInput' %>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="focusedInput">出版日</label>
+        <%= f.text_field :publicationDate, :class => 'form-control', :id => 'focusedInput', :value => @book.publicationDate.try(:strftime, "%Y-%m-%d") %>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="focusedInput">画像URL</label>
+        <%= f.text_field :image, :class => 'form-control', :id => 'focusedInput' %>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="focusedInput">本の概要</label>
+        <%= f.text_area :description, :class => 'form-control', :id => 'focusedInput' %>
+      </div>
+
+      <p class=show-btn>
+        <%= button_tag type: "submit", class: "btn btn-primary" do %>
+        投稿する
+        <% end %>
+        <a href="/" class="btn btn-default" role="button">戻る</a>
+      </p>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      book: 本
+    attributes:
+      book:
+        title: 作品名
+        author: 著者名
+        publisher: 出版社
+        publicationDate: 出版日
+        created_at: 登録日時
+        updated_at: 更新日時

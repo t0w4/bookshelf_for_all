@@ -5,7 +5,7 @@
         <ul class="nav nav-pills">
           <li class="active"><a href="#" class="title">タイトル</a></li>
           <li><a href="#" class="author" >著者名</a></li>
-          <li><a href="#" class="tag">タグ</a></li>
+<!--           <li><a href="#" class="tag">タグ</a></li> -->
         </ul>
 
         <%= form_tag('/books/search', method: :get) do %>
@@ -25,7 +25,7 @@
     <hr></hr>
 
     <div class="row">
-      <div class="col-md-offset-1 col-md-8">
+      <div class="col-md-offset-2 col-md-8">
         <h4>
           <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
           新着本
@@ -42,5 +42,4 @@
         </div>
 
       </div>
-      <div class="col-md-3">col-md-2</div>
     </div>
