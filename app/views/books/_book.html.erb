@@ -1,7 +1,7 @@
             <div class="col-sm-4 col-md-3">
               <div class="thumbnail">
                 <div class="imag-tag">
-                <%= link_to image_tag(book.image, {:border => '0', :alt => '画像がありません'}), book_path(book.id) %>
+                <%= link_to image_tag(book.image, {:size => "175x300", :border => '0', :alt => '画像がありません'}), book_path(book.id) %>
                 </div>
                 <div class="caption">
                   <%= link_to truncate(book.title, length: 25), book_path(book.id) ,class: "book-info" %>
