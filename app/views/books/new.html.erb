@@ -9,28 +9,28 @@
 
     <%= form_for @book do |f| %>
       <div class="form-group">
-        <label class="control-label" for="focusedInput">作品名</label>
-        <%= f.text_field :title, :class => 'form-control', :id => 'focusedInput' %>
+        <label class="control-label" for="focusedInput_title">作品名</label>
+        <%= f.text_field :title, :class => 'form-control', :id => 'focusedInput_title' %>
       </div>
       <div class="form-group">
-        <label class="control-label" for="focusedInput">著者</label>
-        <%= f.text_field :author, :class => 'form-control', :id => 'focusedInput' %>
+        <label class="control-label" for="focusedInput_author">著者</label>
+        <%= f.text_field :author, :class => 'form-control', :id => 'focusedInput_author' %>
       </div>
       <div class="form-group">
-        <label class="control-label" for="focusedInput">出版社</label>
-        <%= f.text_field :publisher, :class => 'form-control', :id => 'focusedInput' %>
+        <label class="control-label" for="focusedInput_publisher">出版社</label>
+        <%= f.text_field :publisher, :class => 'form-control', :id => 'focusedInput_publisher' %>
       </div>
       <div class="form-group">
-        <label class="control-label" for="focusedInput">出版日</label>
-        <%= f.text_field :publicationDate, :class => 'form-control', :id => 'focusedInput' %>
+        <label class="control-label" for="focusedInput_publicationDate">出版日</label>
+        <%= f.text_field :publicationDate, :class => 'form-control', :id => 'focusedInput_publicationDate' %>
       </div>
       <div class="form-group">
-        <label class="control-label" for="focusedInput">画像URL</label>
-        <%= f.text_field :image, :class => 'form-control', :id => 'focusedInput' %>
+        <label class="control-label" for="focusedInput_image">画像URL</label>
+        <%= f.text_field :image, :class => 'form-control', :id => 'focusedInput_image' %>
       </div>
       <div class="form-group">
-        <label class="control-label" for="focusedInput">本の概要</label>
-        <%= f.text_area :description, :class => 'form-control', :id => 'focusedInput' %>
+        <label class="control-label" for="focusedInput_description">本の概要</label>
+        <%= f.text_area :description, :class => 'form-control', :id => 'focusedInput_description' %>
       </div>
 
       <p class=show-btn>

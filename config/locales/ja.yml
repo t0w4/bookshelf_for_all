@@ -14,7 +14,7 @@ ja:
       user:
         email: メールアドレス
         password: パスワード
-
+        password_confirmation: 確認用パスワード
   errors:
       messages:
         inclusion: "は一覧にありません。"
