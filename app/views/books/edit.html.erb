@@ -11,36 +11,34 @@
 
     <%= form_for @book do |f| %>
       <div class="form-group">
-        <label class="control-label" for="focusedInput_title">作品名</label>
-        <%= f.text_field :title, :class => 'form-control', :id => 'focusedInput_title' %>
+        <label class="control-label" for="focusedInput">作品名</label>
+        <%= f.text_field :title, :class => 'form-control', :id => 'focusedInput' %>
       </div>
       <div class="form-group">
-        <label class="control-label" for="focusedInput_author">著者</label>
-        <%= f.text_field :author, :class => 'form-control', :id => 'focusedInput_author' %>
+        <label class="control-label" for="focusedInput">著者</label>
+        <%= f.text_field :author, :class => 'form-control', :id => 'focusedInput' %>
       </div>
       <div class="form-group">
-        <label class="control-label" for="focusedInput_publisher">出版社</label>
-        <%= f.text_field :publisher, :class => 'form-control', :id => 'focusedInput_publisher' %>
+        <label class="control-label" for="focusedInput">出版社</label>
+        <%= f.text_field :publisher, :class => 'form-control', :id => 'focusedInput' %>
       </div>
       <div class="form-group">
-        <label class="control-label" for="focusedInput_publicationDate">出版日</label>
-        <%= f.text_field :publicationDate, :class => 'form-control', :id => 'focusedInput_publicationDate', :value => @book.publicationDate.try(:strftime, "%Y-%m-%d") %>
+        <label class="control-label" for="focusedInput">出版日</label>
+        <%= f.text_field :publicationDate, :class => 'form-control', :id => 'focusedInput', :value => @book.publicationDate.try(:strftime, "%Y-%m-%d") %>
       </div>
       <div class="form-group">
-        <label class="control-label" for="focusedInput_image">画像URL</label>
-        <%= f.text_field :image, :class => 'form-control', :id => 'focusedInput_image' %>
+        <label class="control-label" for="focusedInput">画像URL</label>
+        <%= f.text_field :image, :class => 'form-control', :id => 'focusedInput' %>
       </div>
       <div class="form-group">
-        <label class="control-label" for="focusedInput_tags">タグ（カンマ区切り）</label></br>
-        <%= text_field_tag 'book[tag_list]', @book.tag_list.join(',') , :class => 'form-control', :id => 'focusedInput_tags', "data-role" => "tagsinput" %>
-      </div>
-      <div class="form-group">
-        <label class="control-label" for="focusedInput_description">本の概要</label>
-        <%= f.text_area :description, :class => 'form-control', :id => 'focusedInput_description' %>
+        <label class="control-label" for="focusedInput">本の概要</label>
+        <%= f.text_area :description, :class => 'form-control', :id => 'focusedInput' %>
       </div>
 
       <p class=show-btn>
-      <button type="button" class="btn btn-primary" onclick="submit();">投稿する</button>
+        <%= button_tag type: "submit", class: "btn btn-primary" do %>
+        投稿する
+        <% end %>
         <a href="/" class="btn btn-default" role="button">戻る</a>
       </p>
     <% end %>
