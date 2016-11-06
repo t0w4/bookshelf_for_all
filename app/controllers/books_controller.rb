@@ -13,7 +13,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.new(title: book_params[:title], author: book_params[:author], publisher: book_params[:publisher], publicationDate: book_params[:publicationDate], image: book_params[:image], description: book_params[:description])
+    @book = Book.new(title: book_params[:title], author: book_params[:author], publisher: book_params[:publisher], publicationDate: book_params[:publicationDate], image: book_params[:image], description: book_params[:description], tag_list: book_params[:tag_list])
     # saveメソッドの戻り値をチェック
     if @book.save
       # 戻り値がtrueなので成功
@@ -52,7 +52,7 @@ class BooksController < ApplicationController
     when "author" then
       @books = Book.search(:author_cont => "#{params[:keyword]}").result.page(params[:page]).per(12).order("created_at DESC")
     when "tag" then
-      @books = Book.search(:title_cont => "#{params[:keyword]}").result.page(params[:page]).per(12).order("created_at DESC")
+      @books = Book.tagged_with(params[:keyword]).page(params[:page]).per(12).order("created_at DESC")
     end
   end
 
