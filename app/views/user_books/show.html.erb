@@ -1,0 +1,20 @@
+<div class="col-md-offset-4 col-md-4">
+  <div class="thumbnail">
+    <%= image_tag(@book.image, {:size => "200x300", :border => '0', :alt => '画像がありません'}) %>
+    <div class="caption">
+      <p class="book-info"><%= @book.title %></p>
+      <p class="book-info"><%= @book.author %></p>
+      <p class="book-info"><%= @book.publisher %></p>
+      <p class="book-info"><%= @book.publicationDate.strftime("%Y年 %m月 %d日") %></p>
+      <% @book.tag_list.each do |tag| %>
+        <span class="label label-primary"><%= tag %></span>
+      <% end %><br></br>
+      <p class="book-info"><%= @book.description %></p>
+
+      <p class=show-btn>
+          <%= link_to 'マイ本棚から削除', user_book_path(@user_book.id), method: :delete, class: "btn btn-danger"%>
+          <%= link_to '戻る', user_path(current_user.id), class: "btn btn-default"%>
+      </p>
+    </div>
+  </div>
+</div>

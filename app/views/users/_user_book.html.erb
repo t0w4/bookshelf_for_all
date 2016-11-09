@@ -1,0 +1,14 @@
+            <div class="col-sm-4 col-md-3">
+              <div class="thumbnail">
+                <div class="imag-tag">
+                <%= link_to image_tag(user_book.book.image, {:size => "175x300", :border => '0', :alt => '画像がありません'}), user_book_path(user_book.id) %>
+                </div>
+                <div class="caption">
+                  <%= link_to truncate(user_book.book.title, length: 25), user_book_path(user_book.id) ,class: "book-info" %>
+                  <div class="book-info"><%= truncate(user_book.book.author, length: 20) %></div>
+                  <% user_book.book.tag_list.each do |tag| %>
+                    <span class="label label-primary"><%= tag %></span>
+                  <% end %><br></br>
+                </div>
+              </div>
+            </div>

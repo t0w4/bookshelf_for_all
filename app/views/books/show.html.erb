@@ -10,8 +10,15 @@
         <span class="label label-primary"><%= tag %></span>
       <% end %><br></br>
       <p class="book-info"><%= @book.description %></p>
+
       <p class=show-btn>
         <% if user_signed_in? %>
+          <%= form_tag(add_user_books_path, :method => :post) do %>
+            <%= hidden_field_tag("book_id", @book.id) %>
+            <%= hidden_field_tag("user_id", current_user.id) %>
+            <button type="button" class="btn btn-success" onclick="submit();">マイ本棚に登録</button>
+          <% end %><br />
+
           <a href="/books/<%= @book.id %>/edit" class="btn btn-primary" role="button">編集</a>
           <a href="/" class="btn btn-default" role="button">戻る</a>
           <%= link_to '削除', book_path(@book.id), method: :delete, class: "btn btn-danger"%>

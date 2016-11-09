@@ -1,0 +1,19 @@
+    <div class="row">
+      <div class="col-md-offset-2 col-md-8">
+        <h4>
+          <span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+          マイ本棚
+        </h4>
+        <hr></hr>
+
+        <div class="row">
+          <% @user_books.each do |user_book| %>
+            <%= render partial: "user_book", locals: { user_book: user_book } %>
+          <% end %>
+        </div>
+        <div style='text-align:center;'>
+          <%= paginate(@books) %>
+        </div>
+
+      </div>
+    </div>
