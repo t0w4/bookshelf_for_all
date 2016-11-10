@@ -59,3 +59,6 @@ end
   gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
   gem 'validates_timeliness', '~> 4.0'
   gem 'acts-as-taggable-on'
+  group :production, :staging do
+    gem 'rails_12factor'
+  end
