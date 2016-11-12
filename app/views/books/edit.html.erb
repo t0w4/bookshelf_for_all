@@ -23,7 +23,7 @@
         <%= f.text_field :publisher, :class => 'form-control', :id => 'focusedInput_publisher' %>
       </div>
       <div class="form-group">
-        <label class="control-label" for="focusedInput_publicationDate">出版日</label>
+        <label class="control-label" for="focusedInput_publicationDate">出版日(年/月/日)</label>
         <%= f.text_field :publicationDate, :class => 'form-control', :id => 'focusedInput_publicationDate', :value => @book.publicationDate.try(:strftime, "%Y-%m-%d") %>
       </div>
       <div class="form-group">
@@ -31,7 +31,7 @@
         <%= f.text_field :image, :class => 'form-control', :id => 'focusedInput_image' %>
       </div>
       <div class="form-group">
-        <label class="control-label" for="focusedInput_tags">タグ（カンマ区切り）</label></br>
+        <label class="control-label" for="focusedInput_tags">タグ(入力後Enter)</label></br>
         <%= text_field_tag 'book[tag_list]', @book.tag_list.join(',') , :class => 'form-control', :id => 'focusedInput_tags', "data-role" => "tagsinput" %>
       </div>
       <div class="form-group">
