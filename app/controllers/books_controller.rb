@@ -29,7 +29,6 @@ class BooksController < ApplicationController
   end
 
   def update
-    binding.pry
     @book = Book.find(params[:id])
     if @book.update(title: book_params[:title], author: book_params[:author], publisher: book_params[:publisher], publicationDate: book_params[:publicationDate], image: book_params[:image], description: book_params[:description], tag_list: book_params[:tag_list])
       # 戻り値がtrueなので成功
