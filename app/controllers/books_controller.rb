@@ -13,14 +13,14 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.new(
-                     title:  book_params[:title]
-                   , author: book_params[:author]
-                   , publisher: book_params[:publisher]
-                   , publicationDate: book_params[:publicationDate]
-                   , image: book_params[:image]
-                   , description: book_params[:description]
-                   , tag_list: book_params[:tag_list]
+    @book = Book.new( \
+                     title:  book_params[:title] \
+                   , author: book_params[:author] \
+                   , publisher: book_params[:publisher] \
+                   , publicationDate: book_params[:publicationDate] \
+                   , image: book_params[:image] \
+                   , description: book_params[:description] \
+                   , tag_list: book_params[:tag_list] \
                    )
     # saveメソッドの戻り値をチェック
     if @book.save
@@ -38,14 +38,14 @@ class BooksController < ApplicationController
 
   def update
     @book = Book.find(params[:id])
-    if @book.update(
-                    title: book_params[:title]
-                  , author: book_params[:author]
-                  , publisher: book_params[:publisher]
-                  , publicationDate: book_params[:publicationDate]
-                  , image: book_params[:image]
-                  , description: book_params[:description]
-                  , tag_list: book_params[:tag_list]
+    if @book.update( \
+                    title: book_params[:title] \
+                  , author: book_params[:author] \
+                  , publisher: book_params[:publisher] \
+                  , publicationDate: book_params[:publicationDate] \
+                  , image: book_params[:image] \
+                  , description: book_params[:description] \
+                  , tag_list: book_params[:tag_list] \
                   )
       # 戻り値がtrueなので成功
       redirect_to @book
@@ -74,14 +74,14 @@ class BooksController < ApplicationController
 
   private
   def book_params
-    params.require(:book).permit(
-                                 :title
-                               , :author
-                               , :publisher
-                               , :publicationDate
-                               , :image
-                               , :description
-                               , :tag_list
+    params.require(:book).permit( \
+                                 :title \
+                               , :author \
+                               , :publisher \
+                               , :publicationDate \
+                               , :image \
+                               , :description \
+                               , :tag_list \
                                )
   end
 
