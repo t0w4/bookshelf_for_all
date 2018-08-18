@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
+# for macOS Sierra & ruby 2.4
+gem 'json', git: 'https://github.com/flori/json.git', branch: 'v1.8'
 # Use mysql as the database for Active Record
 gem 'mysql2', '0.3.18'
 # Use SCSS for stylesheets
@@ -62,3 +64,4 @@ end
   group :production, :staging do
     gem 'rails_12factor'
   end
+  gem 'rb-readline'
