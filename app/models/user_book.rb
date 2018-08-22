@@ -1,7 +1,7 @@
-class UserBook < ActiveRecord::Base
+# frozen_string_literal: true
 
-  #association
+class UserBook < ActiveRecord::Base
+  # association
   belongs_to :book
   belongs_to :user
-
 end
