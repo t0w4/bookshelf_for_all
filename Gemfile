@@ -28,7 +28,7 @@ gem 'sprockets'
 gem 'sprockets-rails'
 gem "less-rails", "~> 2.8.0"
 
-gem 'rubocop'
+gem 'rubocop', require: false
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
