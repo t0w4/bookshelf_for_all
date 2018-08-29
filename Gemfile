@@ -50,22 +50,24 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-  gem 'pry-rails'
-  gem 'devise'
-  gem 'paperclip'
-  gem 'kaminari'
-  gem 'therubyracer'
-  gem 'gretel'
-  gem 'execjs'
-  gem 'twitter-bootswatch-rails', '~> 3.1.1'
-  gem 'twitter-bootswatch-rails-helpers'
-  gem 'ransack'
-  gem 'kaminari-bootstrap', '~> 3.0.1'
-  gem 'momentjs-rails', '>= 2.9.0'
-  gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
-  gem 'validates_timeliness', '~> 4.0'
-  gem 'acts-as-taggable-on'
-  group :production, :staging do
-    gem 'rails_12factor'
-  end
-  gem 'rb-readline'
+
+gem 'acts-as-taggable-on'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
+gem 'devise'
+gem 'execjs'
+gem 'gretel'
+gem 'kaminari'
+gem 'kaminari-bootstrap', '~> 3.0.1'
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'paperclip'
+gem 'pry-rails'
+gem 'ransack'
+gem 'therubyracer'
+gem 'twitter-bootswatch-rails', '~> 3.1.1'
+gem 'twitter-bootswatch-rails-helpers'
+gem 'validates_timeliness', '~> 4.0'
+
+group :production, :staging do
+  gem 'rails_12factor'
+end
+gem 'rb-readline'
