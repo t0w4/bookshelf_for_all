@@ -296,7 +296,6 @@ DEPENDENCIES
   json!
   kaminari
   kaminari-bootstrap (~> 3.0.1)
-  less-rails (~> 2.8.0)
   momentjs-rails (>= 2.9.0)
   mysql2 (= 0.3.18)
   paperclip
