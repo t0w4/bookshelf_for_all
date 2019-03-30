@@ -51,9 +51,9 @@ group :development do
   gem 'spring'
 end
 
-gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on', '~> 6.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
-gem 'devise'
+gem 'devise', '~> 4.6.2'
 gem 'execjs'
 gem 'gretel'
 gem 'kaminari'
@@ -63,7 +63,7 @@ gem 'paperclip'
 gem 'pry-rails'
 gem 'ransack'
 gem 'therubyracer'
-gem 'twitter-bootswatch-rails', '~> 3.1.1'
+gem 'twitter-bootswatch-rails'
 gem 'twitter-bootswatch-rails-helpers'
 gem 'validates_timeliness', '~> 4.0'
 
