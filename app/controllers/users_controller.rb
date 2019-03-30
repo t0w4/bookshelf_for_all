@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     @user_book = UserBook.new(book_id: user_book_params[:id],
                               user_id: book_params[current_user.id])
     return redirect_to @user if @user_book.save
+
     render :show
   end
 

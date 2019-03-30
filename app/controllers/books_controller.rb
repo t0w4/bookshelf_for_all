@@ -17,6 +17,7 @@ class BooksController < ApplicationController
     @book = Book.new
     create_or_update_params
     return redirect_to @book if @book.save
+
     render :new
   end
 
@@ -25,6 +26,7 @@ class BooksController < ApplicationController
   def update
     create_or_update_params
     return redirect_to @book if @book.save
+
     render :edit, collections: @book
   end
 
