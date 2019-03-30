@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.9'
+gem 'rails', '4.2.10'
 # for macOS Sierra & ruby 2.4
 gem 'json', git: 'https://github.com/flori/json.git', branch: 'v1.8'
 # Use mysql as the database for Active Record
