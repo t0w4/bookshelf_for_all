@@ -296,7 +296,7 @@ DEPENDENCIES
   rubocop
   sass-rails (~> 5.0.0)
   spring
-  sprockets
+  sprockets (~> 3.7.0)
   sprockets-rails
   therubyracer
   turbolinks
