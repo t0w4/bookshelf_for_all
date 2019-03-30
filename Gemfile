@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
-ruby "2.5.1"
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.9'
@@ -23,10 +25,10 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
+gem 'less-rails', '~> 2.8.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sprockets'
 gem 'sprockets-rails'
-gem "less-rails", "~> 2.8.0"
 
 gem 'rubocop', require: false
 # Use ActiveModel has_secure_password
@@ -41,9 +43,9 @@ gem 'rubocop', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'rails-controller-testing'
+  gem 'rspec-rails'
 end
 
 group :development do
