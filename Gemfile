@@ -53,7 +53,7 @@ end
 
 gem 'acts-as-taggable-on', '~> 6.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.42'
-gem 'devise', '~> 4.6.2'
+gem "devise", ">= 4.7.1"
 gem 'execjs'
 gem 'kaminari'
 gem 'kaminari-bootstrap', '~> 3.0.1'
